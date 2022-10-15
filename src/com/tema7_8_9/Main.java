@@ -1,5 +1,6 @@
 package com.tema7_8_9;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 
 public class Main {
@@ -7,11 +8,11 @@ public class Main {
 
         //1 y 2. Array unidimensional y bidimensional
 
-        //ArrayUnidimensional.arreglos();
+        ArrayUnidimensional.arreglos();
 
         //3. Vectores
 
-        //Vectores.vect();
+        Vectores.vect();
 
          /*
         4. Cuando se utiliza un vector y se execede su capacidad por debajo se crea un nuevo array y
@@ -22,9 +23,10 @@ public class Main {
 
         //5. listas
 
-        //Listas.arrayList();
+        Listas.arrayList();
 
-        //ListaEnteros.listaInt();
+        ListaEnteros.listaInt();
+
 
         try {
             Execpcion.dividePorCero(4 , 0);
@@ -36,7 +38,19 @@ public class Main {
         try{
             InputFichero.input();
         }catch (FileNotFoundException e){
-            System.out.println("No se encuentra el fichero ---- " + e.getMessage());
+            System.out.println(" No se encuentra el fichero ---- " + e.getMessage());
+        }
+
+
+
+
+        try{
+            String ruta = "/openBootcamp/Probando/HolaMundo.txt";
+            String ruta2 = "destino.txt";
+            EntSalida.archivos(ruta, ruta2);
+
+        }catch (FileNotFoundException e){
+            System.out.println("No se encuentra el fichero Nuevo " + e.getMessage());
         }
 
 
